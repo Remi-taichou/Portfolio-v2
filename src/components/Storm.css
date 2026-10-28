@@ -1,0 +1,21 @@
+.storm {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #050816 0%, #0a1330 55%, #12204a 100%);
+}
+
+.storm canvas,
+.storm-flash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.storm-flash {
+  background: #bcd0ff;
+  opacity: 0;
+}
