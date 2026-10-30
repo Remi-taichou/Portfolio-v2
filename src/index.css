@@ -10,15 +10,68 @@ a {
 }
 
 nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 32px;
 }
 
-nav div {
+.nav-logo {
+  font-weight: 700;
+}
+
+.nav-links {
   display: flex;
   gap: 28px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 18px 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10, 19, 48, 0.85);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-links a:first-child {
+    border-top: none;
+  }
 }
 
 main {
@@ -133,4 +186,29 @@ h2 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #7aa2ff;
+}
+
+#about,
+#contact {
+  padding: 40px 0 60px;
+}
+
+#about p {
+  color: #b8c4e8;
+  max-width: 52ch;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 0;
+  color: #8fa3d6;
+  font-size: 12px;
 }
