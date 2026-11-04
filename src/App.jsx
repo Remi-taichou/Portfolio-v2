@@ -13,10 +13,11 @@ function App() {
       <main>
         <Hero />
         <Projects />
+        <div className="about-contact">
+          <About />
+          <Contact />
+        </div>
       </main>
-      <Projects />
-<About />
-<Contact />
     </>
   )
 }

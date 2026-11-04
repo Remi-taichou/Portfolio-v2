@@ -212,3 +212,69 @@ footer {
   color: #8fa3d6;
   font-size: 12px;
 }
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #b8c4e8;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.filter-btn.active {
+  background: #eef2ff;
+  color: #050816;
+  border-color: #eef2ff;
+}
+
+.about-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 0 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-contact #about,
+.about-contact #contact {
+  padding: 0;
+}
+
+.about-contact #contact {
+  justify-self: end;
+  text-align: right;
+}
+
+.about-contact .contact-links {
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .about-contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-contact #contact {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .about-contact .contact-links {
+    justify-content: flex-start;
+  }
+}
